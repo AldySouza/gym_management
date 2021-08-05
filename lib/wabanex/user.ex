@@ -2,7 +2,8 @@ defmodule Wabanex.User do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key { :id, :binary_id, autogenerate: true } # inserçao automática do id
+  # inserçao automática do id
+  @primary_key {:id, :binary_id, autogenerate: true}
 
   @fields [:email, :password, :name]
 

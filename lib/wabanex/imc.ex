@@ -12,7 +12,7 @@ defmodule Wabanex.IMC do
       |> Enum.map(fn line -> parse_line(line) end)
       |> Enum.into(%{})
 
-      {:ok, data}
+    {:ok, data}
   end
 
   defp handle_file({:error, _reason}) do
@@ -22,7 +22,8 @@ defmodule Wabanex.IMC do
   defp parse_line(line) do
     line
     |> String.split(",")
-    |> List.update_at(1, &String.to_float/1) #mesma coisa que a função de cima 'fn line -> ...'
+    # mesma coisa que a função de cima 'fn line -> ...'
+    |> List.update_at(1, &String.to_float/1)
     |> List.update_at(2, &String.to_float/1)
     |> calculate_imc()
     |> IO.inspect()

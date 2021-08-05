@@ -12,7 +12,7 @@ defmodule Wabanex.Users.Get do
     {:error, "Invalid UUID"}
   end
 
-  defp handle_response({:ok, uuid})do
+  defp handle_response({:ok, uuid}) do
     case Repo.get(User, uuid) do
       nil -> {:error, "User not found"}
       user -> {:ok, user}
