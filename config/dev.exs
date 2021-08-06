@@ -4,7 +4,7 @@ use Mix.Config
 config :wabanex, Wabanex.Repo,
   username: "postgres",
   password: "mzhide",
-  database: "wabanex_dev",
+  database: "wabanex",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

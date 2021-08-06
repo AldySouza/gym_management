@@ -8,7 +8,7 @@ use Mix.Config
 config :wabanex, Wabanex.Repo,
   username: "postgres",
   password: "mzhide",
-  database: "wabanex_dev",
+  database: "wabanex",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
